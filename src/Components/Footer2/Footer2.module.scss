@@ -1,11 +1,11 @@
-.footer2-wrapper {
+.footer2Wrapper {
   background-color: white;
   .footer2 {
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
-    .footer2-data {
+    .footer2Data {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
@@ -16,13 +16,13 @@
     *li {
       list-style: none;
     }
-    .footer2-coloumn-title {
+    .footer2ColoumnTitle {
       font-size: 14px;
       font-weight: 400;
       color: black;
       margin: 13px 0 4px;
     }
-    .footer2-sublinks {
+    .footer2Sublinks {
       padding: 0;
       margin: 0;
       line-height: 13px;

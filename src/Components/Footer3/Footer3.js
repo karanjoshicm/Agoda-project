@@ -1,8 +1,8 @@
 import React from "react";
 
 //style
-import "../Footer1/Footer1.scss";
-import "./Footer3.scss";
+import style1 from "../Footer1/Footer1.module.scss";
+import styles from "./Footer3.module.scss";
 
 //assets
 import bookingCom from "../../assets/booking.png";
@@ -23,24 +23,24 @@ const Footer3 = () => {
   ];
 
   return (
-    <div className="footer3-wrapper">
-      <div className="footer footer3">
-        <div className="footer3-text">
+    <div className={styles.footer3Wrapper}>
+      <div className={`${styles.footer3} ${style1.footer}`}>
+        <div className={styles.footer3Text}>
           All material herein © 2005–2023 Agoda Company Pvt. Ltd. All Rights
           Reserved.
         </div>
-        <div className="footer3-text">
+        <div className={styles.footer3Text}>
           Agoda is part of Booking Holdings Inc., the world leader in online
           travel & related services.
         </div>
-        <div className="footer3-companiesLogo">
+        <div className={styles.footer3CompaniesLogo}>
           {logoData.map((img) => (
-            <div className="footer-logo-container">
-              <img className="footer-company-logo" src={img} />
+            <div className={styles.footerLogoContainer}>
+              <img className={styles.footerCompanyLogo} src={img} />
             </div>
           ))}
         </div>
-        <div className="footer3-text sm">
+        <div className={`${styles.footer3Text} ${styles.sm}`}>
           sg-pc-6g-acm-web-user-59887698cc-z4vjs
         </div>
       </div>

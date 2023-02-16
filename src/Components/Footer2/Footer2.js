@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../Footer1/Footer1.scss";
-import "./Footer2.scss";
+import style1 from "../Footer1/Footer1.module.scss";
+import styles from "./Footer2.module.scss";
 import footer2Data from "./footer2Data";
 const Footer2 = () => {
   return (
-    <div className="footer2-wrapper">
-      <div className="footer footer2">
+    <div className={styles.footer2Wrapper}>
+      <div className={`${style1.footer} ${styles.footer2}`}>
         {footer2Data.map((elem) => (
-          <div className="footer2-coloumn">
-            <div className="footer2-coloumn-title">{elem.title}</div>
-            <div className="footer2-data">
+          <div className={styles.footer2Coloumn}>
+            <div className={styles.footer2ColoumnTitle}>{elem.title}</div>
+            <div className={styles.footer2Data}>
               {elem?.data?.map((subitem) => (
-                <div className="footer2-coloumn-data">
+                <div className={styles.footer2ColoumnData}>
                   <li
-                    className="footer2-coloumn-title"
+                    className={styles.footer2ColoumnTitle}
                     style={{
                       paddingBottom: 5,
                     }}
@@ -23,7 +23,7 @@ const Footer2 = () => {
                     <span>{subitem.name}</span>
                   </li>
                   {subitem?.links?.map((link) => (
-                    <li className="footer2-sublinks">
+                    <li className={styles.footer2Sublinks}>
                       <Link to={link.path}>{link.text}</Link>
                     </li>
                   ))}

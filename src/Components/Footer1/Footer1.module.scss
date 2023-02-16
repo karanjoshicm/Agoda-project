@@ -1,4 +1,4 @@
-.footer1-wrapper {
+.footer1Wrapper {
   background-color: rgb(233, 235, 238);
   color: rgb(42, 42, 46);
 
@@ -6,14 +6,14 @@
     display: flex;
     justify-content: space-between;
   }
-  .footer-coloumn {
-    .footer-coloumn-title {
+  .footerColoumn {
+    .footerColoumnTitle {
       font-size: 16px;
       line-height: 16px;
       font-weight: 500;
       margin-bottom: 12px;
     }
-    .footer-coloumn-links {
+    .footerColoumnLinks {
       li {
         list-style: none;
         line-height: 20px;
