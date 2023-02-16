@@ -224,7 +224,7 @@ const footer2Data = [
         name: "Asia",
         links: [
           {
-            text: "Bali Guides",
+            text: "Bali Guide",
             path: "/",
           },
           {
