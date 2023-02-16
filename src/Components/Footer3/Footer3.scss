@@ -1,0 +1,35 @@
+.footer3-wrapper {
+  background-color: rgb(42, 42, 46);
+  color: rgb(215, 215, 219);
+
+  .footer3 {
+    padding-bottom: 20px;
+    .footer3-text {
+      text-align: center;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 300;
+      margin: 8px;
+      &.sm {
+        font-size: 80%;
+      }
+    }
+    .footer3-companiesLogo {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 35px 0 50px;
+      .footer-logo-container {
+        height: 50px;
+        // width: 150px;
+        position: relative;
+        .footer-company-logo {
+          height: 100%;
+          width: 150px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
