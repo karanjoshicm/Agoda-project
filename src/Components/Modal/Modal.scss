@@ -1,0 +1,35 @@
+@import "../../global.scss";
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(83, 146, 249, 0.448);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .modal {
+    margin: auto;
+    padding: 16px 0;
+    min-width: 400px;
+    min-height: 400px;
+    border-radius: 5px;
+    background-color: white;
+    .modal-header {
+      padding: 0 8px 8px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $primary-blue;
+    }
+    .modal-body {
+      padding: 8px; 
+    }
+  }
+}

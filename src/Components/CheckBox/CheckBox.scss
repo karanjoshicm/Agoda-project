@@ -1,0 +1,12 @@
+.checkBox{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 13px;
+    margin: 12px 0;
+    .checkBox-label{
+        font-size: 14px;
+        font-weight: 400;
+        text-align: left;
+    }
+}

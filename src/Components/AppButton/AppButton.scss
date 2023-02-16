@@ -1,0 +1,40 @@
+@import "../../global.scss";
+.appButton {
+  white-space: nowrap;
+  user-select: none;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.15s ease-in-out 0s;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  &.danger {
+    border-color: rgb(255, 86, 125);
+    color: rgb(255, 86, 125);
+    &:hover {
+      background-color: rgb(255, 86, 125);
+      color: rgb(255, 255, 255);
+    }
+  }
+  &.primary {
+    border: 1px solid $primary-blue;
+    color: $primary-blue;
+    &:hover {
+      background-color: $primary-blue;
+      color: rgb(255, 255, 255);
+      &.solid {
+        // opacity: 0.7;
+        background-color: $light-blue;
+      }
+    }
+    &.solid {
+      background-color: $primary-blue;
+      color: rgb(255, 255, 255);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.swapValue {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  &.small{
+    width: 49%;
+    .swapIcon{
+      left: 27%;
+    }
+  }
+  .swapValue-inputContainer {
+    flex: 1;
+  }
+  .swapIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: none;
+    user-select: none;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.15s ease-in-out 0s;
+    color: black;
+    cursor: pointer;
+    &:hover {
+      color: rgb(83, 146, 249);
+    }
+  }
+}

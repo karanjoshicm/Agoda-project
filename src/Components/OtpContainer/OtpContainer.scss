@@ -1,0 +1,34 @@
+@import "../../global.scss";
+.otp-wrapper {
+  padding: 12px;
+  .otpContainer {
+    display: flex;
+    gap: 10px;
+    .otp-input {
+      width: 14%;
+      padding: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: rgb(42, 42, 46);
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(206, 208, 212);
+      background-clip: padding-box;
+      box-sizing: border-box;
+      appearance: none;
+      border-radius: 4px;
+      transition: border-color 0.15s ease-in-out 0s,
+        box-shadow 0.15s ease-in-out 0s;
+      text-align: center;
+      outline: none;
+      &:focus {
+        box-shadow: inset 1px 2px 4px rgba(83, 146, 249, 0.01),
+          0px 0px 8px rgba(83, 146, 249, 0.2);
+        border-color: $primary-blue;
+      }
+      &.green {
+        border-color: rgb(50, 169, 35);
+      }
+    }
+  }
+}

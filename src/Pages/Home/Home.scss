@@ -1,0 +1,17 @@
+.emailVerification-modal-body {
+  .emailVerification-modal-text {
+    text-align: center;
+  }
+}
+
+.homeWrapper {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: auto;
+  .loader-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+}

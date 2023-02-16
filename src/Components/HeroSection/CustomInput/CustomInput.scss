@@ -1,0 +1,66 @@
+@import "../../../global.scss";
+.customInput-container {
+    position: relative;
+    z-index: 2;
+  .customInput-inputBox {
+    position: relative;
+    .customInput-searchIcon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+    }
+    .customInput-inputField {
+      padding: 22px;
+      width: 100%;
+      box-shadow: 0 4px 10px 0 rgb(0 0 0 / 7%);
+      border: 1px solid #dddfe2;
+      border-radius: 8px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      font-size: 16px;
+      outline: none;
+      color: black;
+      padding-left: 50px;
+      cursor: pointer;
+      &::placeholder {
+        color: #2a2a2e;
+        // font-weight: 400;
+      }
+    }
+  }
+  .customInput-suggestionContainer {
+    margin-top: 10px;
+    height: 350px;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 7%);
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+    // position: relative;
+    background-color: white;
+    z-index: 999 !important;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    &::after {
+      content: " ";
+      position: absolute;
+      top: -10px;
+      left: 54px;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 0;
+      border-top-color: #dde9fd;
+      border-bottom-color: #dde9fd;
+    }
+
+    .suggestion-list {
+      @include hideScrollbar;
+      overflow-y: scroll;
+      height: inherit;
+    }
+  }
+}

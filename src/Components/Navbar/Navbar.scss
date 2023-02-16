@@ -1,0 +1,131 @@
+@import "../../global.scss";
+
+.navbar {
+  display: flex;
+  padding: 0px 24px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(42, 42, 46);
+  min-height: 60px;
+  -webkit-box-align: center;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 130px;
+  .navbar-left {
+    padding: 0px 16px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .logo {
+      height: 37px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    .navbar-left-links-container {
+      display: inline-block;
+      padding-left: 10px;
+    }
+    .navbar-left-more {
+      padding-left: 14px;
+      padding-top: 7px;
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navbar-right {
+    display: flex;
+    // justify-content: flex-end;
+    align-items: center;
+    .navbar-right-span {
+      padding: 16px;
+      cursor: pointer;
+    }
+    .user-profile-details {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      // position: relative;
+      .user-profile-agodaMoney {
+        display: flex;
+        align-items: center;
+        svg {
+          font-size: 18px;
+
+          fill: rgb(112, 77, 255);
+        }
+        span {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 300;
+          color: rgb(112, 77, 255);
+          margin-left: 3px;
+        }
+      }
+      .user-profile-icon {
+        text-align: center;
+        border-radius: 50%;
+        -webkit-box-pack: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        color: rgb(249, 249, 250);
+        background-color: rgb(240, 87, 0);
+        margin-right: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .user-profile-tooltip {
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: rgb(42, 42, 46);
+        font-size: 14px;
+        &:hover {
+          background-color: rgb(248, 247, 249);
+          color: rgb(83, 146, 249);
+        }
+      }
+    }
+  }
+}
+
+// declare here as it is required in tooltip also
+.navbar-left-link {
+  display: inline-block;
+  position: relative;
+  line-height: 56px;
+  list-style: none;
+  padding-left: 30px;
+  padding-right: 0px;
+  font-weight: unset;
+  .nav-left-link-icon-svg {
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+    svg,
+    img {
+      object-fit: cover;
+    }
+    // background-color: red;
+  }
+  a {
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 17px;
+    color: inherit;
+    position: relative;
+    &:visited {
+      color: rgb(42, 42, 46);
+    }
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+.login {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  // min-height: 100vh;
+  padding-top: 40px;
+  .login-container {
+    min-width: 500px;
+    width: 500px;
+    padding: 16px 24px 24px;
+    min-height: 600px;
+    .login-container-header {
+      margin: 8px 0;
+      .login-container-title {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 500;
+        margin: 0px;
+        margin-bottom: 6px;
+      }
+      .login-container-subtitle {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+    }
+    .loginText {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: transparent;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      color: rgb(83, 146, 249);
+      & > div {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        &:hover {
+          text-decoration: underline;
+          opacity: 0.7;
+        }
+      }
+      margin-bottom: 20px;
+    }
+    .login-flex {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+      & > * {
+        flex: 1;
+      }
+    }
+    .login-phone-flex {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      .dropdown {
+        box-sizing: border-box;
+        margin: 0px;
+        flex-basis: 33.3333%;
+        -webkit-box-flex: 0;
+        flex-grow: 0;
+        max-width: 33.3333%;
+        margin-top: 3px;
+      }
+    }
+    .mobileNumber-input-label {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+    .mobileNumber-input-text {
+      text-align: center;
+      padding: 4px 0;
+      font-size: 14px;
+    }
+    .resend-otp {
+      color: rgb(83, 146, 249);
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../global.scss";
+.inputContainer {
+  padding: 12px 0;
+  width: 100%;
+  .inputContainer-label {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-bottom: 4px;
+  }
+  .inputContainer-input {
+    width: 100%;
+    margin: 0px;
+    font-size: 14px;
+    padding: 8px;
+    font-weight: 400;
+    line-height: 22px;
+    color: rgb(42, 42, 46);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(206, 208, 212);
+    background-clip: padding-box;
+    box-sizing: border-box;
+    appearance: none;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out 0s,
+      box-shadow 0.15s ease-in-out 0s;
+    outline: none;
+    &:focus {
+      box-shadow: inset 1px 2px 4px rgba(83, 146, 249, 0.01),
+        0px 0px 8px rgba(83, 146, 249, 0.2);
+        border-color: $primary-blue ;
+    }
+    &::placeholder{
+        color: rgb(194, 194, 194);
+        font-weight: 400;
+    }
+    &.error{
+      border: 1px solid rgb(225, 45, 45);
+    }
+  }
+}

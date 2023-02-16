@@ -1,0 +1,51 @@
+.rentals {
+  margin: 64px auto;
+
+  .rentals-title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 8px 0px;
+    margin-bottom: 24px;
+  }
+  .rental-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    .rental-card {
+      position: relative;
+      box-shadow: none;
+      border-radius: 0px;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(221, 223, 226);
+
+      .rental-card-info {
+        margin: 8px;
+        .rental-card-title {
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: 500;
+          color: rgb(42, 42, 46);
+          text-transform: capitalize;
+        }
+        .rental-card-subtitle {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 400;
+          color: rgb(115, 115, 115);
+          //   margin-top: 4px;
+        }
+      }
+      .rental-card-image {
+        width: 100%;
+      }
+      &:hover {
+        box-shadow: 0 1px 6px 2px rgb(0 0 0 / 20%);
+        cursor: pointer;
+      }
+    }
+  }
+}

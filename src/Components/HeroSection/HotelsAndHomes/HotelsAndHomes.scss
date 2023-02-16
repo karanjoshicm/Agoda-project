@@ -1,0 +1,111 @@
+.hotelAndHomes {
+  .hotelAndHomes-buttonContainer {
+    position: relative;
+    z-index: 2;
+  }
+  .hotelAndHomes-InputContainer {
+    margin-top: 10px;
+    z-index: 2;
+  }
+  .hotelAndHomes-DateContainer {
+    margin-top: 10px;
+    gap: 10px;
+    display: flex;
+    .hotelAndHomes-guests {
+      background-color: white;
+      padding: 10px;
+      height: 66px;
+      border-radius: 8px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 4px 10px 0 rgb(0 0 0 / 7%);
+      border: 1px solid #dddfe2;
+      &.showToolTip {
+        &::after {
+          content: " ";
+          position: absolute;
+          bottom: -10px;
+          left: 54px;
+          margin-left: -10px;
+          border-width: 10px;
+          border-style: solid;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 0;
+          border-top-color: #fff;
+          border-bottom-color: #fff;
+          z-index: 2;
+        }
+      }
+      .hotelAndHomes-guest-count {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .hotelAndHomes-guests-icon {
+          svg {
+            display: block;
+          }
+        }
+        .hotelAndHomes-guests-info {
+          h5 {
+            font-weight: 400;
+            color: #2a2a2e;
+            font-size: 17px;
+          }
+          p {
+            color: #999;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+.tooltip-flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: default;
+  .guest-info-heading {
+    font-weight: 600;
+    text-align: left;
+    font-size: 16px;
+    .guest-info-subheading {
+      font-weight: 400;
+      color: rgb(107, 115, 136);
+      fill: rgb(107, 115, 136);
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+  .guest-counter {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    user-select: none;
+    .guest-counter-controller {
+      -webkit-tap-highlight-color: transparent;
+      border-width: 1px;
+      border-color: rgb(168, 179, 203);
+      border-radius: 100%;
+      color: inherit;
+      fill: inherit;
+      border-style: solid;
+      display: flex;
+      cursor: pointer;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+
+}

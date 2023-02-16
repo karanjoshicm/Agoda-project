@@ -1,0 +1,41 @@
+@import "../../global.scss";
+.buttonWrapper {
+  padding: 12px 0;
+  .formButton {
+    position: relative;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    user-select: none;
+    transition: all 0.15s ease-in-out 0s;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid $primary-blue;
+    cursor: pointer;
+    color: $primary-blue;
+    font-weight: 700;
+
+    &:hover {
+      opacity: 0.9;
+      &.hoverEffect {
+        background-color: $primary-blue;
+        color: white;
+      }
+    }
+
+    .formButton-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+    &.solid {
+      background-color: rgb(83, 146, 249);
+      box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+
+      .formButton-text {
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}

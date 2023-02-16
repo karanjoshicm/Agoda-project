@@ -1,0 +1,78 @@
+.promotions {
+  position: relative;
+  overflow: hidden;
+  .promotions-shadow {
+    width: 35px;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    visibility: visible;
+    &.left {
+      left: 0;
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0),
+        rgb(255, 255, 255)
+      );
+    }
+    &.right {
+      right: 0;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgb(255, 255, 255)
+      );
+    }
+  }
+  .promotionContainer {
+    background-size: cover;
+    background-position: center;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 510px;
+    height: 200px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .promotions-title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 8px 0px;
+  }
+}
+
+//Slider style fix
+.images-wrap > div {
+  width: fit-content !important;
+  margin-right: 10px;
+  height: fit-content;
+}
+
+.images-wrap {
+  margin-right: -10px;
+}
+.indicators {
+  margin-top: 0;
+}
+
+.slider-button {
+  width: 32px;
+  height: 32px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(221, 223, 226);
+  z-index: 9;
+  cursor: pointer;
+}

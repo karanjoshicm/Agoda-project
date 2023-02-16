@@ -1,0 +1,13 @@
+.tooltip {
+  position: absolute;
+  // min-height: 160px;
+  min-width: 140px;
+  border: 1px solid rgb(221, 223, 226);
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 3px 1px;
+  color: inherit;
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 9;
+  background-color: white;
+
+}

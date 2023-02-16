@@ -1,0 +1,118 @@
+.flights-flex {
+  display: flex;
+  //   justify-content: space-between;
+  margin-top: 10px;
+  gap: 20px;
+}
+
+.flight-data {
+  flex: 1;
+  background-color: white;
+  padding: 10px;
+  height: 66px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 7%);
+  border: 1px solid #dddfe2;
+  padding-left: 20px;
+  .flight-data-title {
+    text-align: left;
+    font-size: 16px;
+    .flight-data-subtitle {
+      font-weight: 400;
+      color: rgb(107, 115, 136);
+      fill: rgb(107, 115, 136);
+      text-align: left;
+      font-size: 12px;
+    }
+  }
+
+  &.showToolTip {
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: -13px;
+      left: 24px;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 0;
+      border-top-color: #fff;
+      border-bottom-color: #fff;
+      z-index: 4;
+    }
+  }
+  &.roomToolTip {
+    &::after {
+      content: " ";
+      position: absolute;
+      bottom: -13px;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 0;
+      border-top-color: #fff;
+      border-bottom-color: #fff;
+      z-index: 4;
+      right: 24px;
+    }
+  }
+  .tooltip-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(144, 148, 156);
+    padding: 16px !important;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 22px;
+      gap: 5px;
+    }
+    .hightlight {
+      color: rgb(83, 146, 249);
+    }
+    .text-grey {
+      font-size: 14px;
+      color: rgb(144, 148, 156);
+    }
+  }
+}
+.passenger-room {
+  flex: 1;
+  background-color: white;
+  padding: 10px;
+  height: 66px;
+  border-radius: 8px;
+  // width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  gap: 10px;
+  z-index: 2;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 7%);
+  border: 1px solid #dddfe2;
+  padding-left: 20px;
+  label {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+.activeRoomText{
+  color: rgb(83, 146, 249);
+}

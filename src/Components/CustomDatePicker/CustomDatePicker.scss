@@ -1,0 +1,50 @@
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+.rdrDateDisplayWrapper {
+  min-width: 490px;    
+  background-color: white;
+  border-radius: 8px;
+
+  z-index: 2;
+  // border-bottom: 1px solid rgb(193, 186, 186);
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 7%);
+  border: 1px solid #dddfe2;
+}
+.rdrMonthAndYearWrapper,
+.rdrMonthsHorizontal {
+  display: none !important;
+  transition: 0.3s all ease;
+}
+
+.active {
+  .rdrMonthAndYearWrapper,
+  .rdrMonthsHorizontal {
+    z-index: 0;
+    display: flex !important;
+  }
+}
+
+.rdrDateDisplayItem {
+  padding: 1.5px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+
+}
+.rdrDateRangeWrapper {
+  z-index: 1;
+  border-radius: 8px;
+  
+}
+.rdrDateInput {
+
+  input {
+    color: #2a2a2e !important;
+    font-weight: 400;
+    font-size: 16px;
+    :nth-child(1){
+      border-right: 1px solid red;
+    }
+  }
+}

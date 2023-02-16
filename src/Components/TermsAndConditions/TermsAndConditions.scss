@@ -1,0 +1,16 @@
+.termAndCondition {
+  font-size: 12px;
+  text-align: center;
+  a {
+    background-color: transparent;
+    text-decoration: none;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(83, 146, 249);
+    margin: 0 2px;
+    &:hover{
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+  }
+}
