@@ -1,31 +1,38 @@
 import React, { useState } from "react";
+import { createSearchParams, useNavigate } from "react-router-dom";
 
 //compoments
 import AppButton from "../../AppButton/AppButton";
 import CustomDatePicker from "../../CustomDatePicker/CustomDatePicker";
 import CustomInput from "../CustomInput/CustomInput";
+import Tooptip from "../../Tooltip/Tooptip";
+
+//icons
 import { BsPeople } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 //styles
 import "./HotelsAndHomes.scss";
-import Tooptip from "../../Tooltip/Tooptip";
 const HotelsAndHomes = ({ setShowOverlay, privateStays = false }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [showToolTip, setShowToolTip] = useState(false);
   const [roomCount, setRoomCount] = useState(1);
   const [adultCount, setAdultCount] = useState(1);
   const [childCount, setChildCount] = useState(1);
+  const [checkIn, setCheckIn] = useState(new Date());
+  const [checkOut, setCheckOut] = useState(new Date());
+  const navigate = useNavigate();
   return (
     <div className="hotelAndHomes">
-      {
-        privateStays ? <></> :
-          <div className="hotelAndHomes-buttonContainer">
-            <AppButton style={{ marginRight: "7px" }} solid={true}>
-              Overnight Stays
-            </AppButton>
-            <AppButton>Day Use Stays</AppButton>
-          </div>
-      }
+      {privateStays ? (
+        <></>
+      ) : (
+        <div className="hotelAndHomes-buttonContainer">
+          <AppButton style={{ marginRight: "7px" }} solid={true}>
+            Overnight Stays
+          </AppButton>
+          <AppButton>Day Use Stays</AppButton>
+        </div>
+      )}
       <div className="hotelAndHomes-InputContainer">
         <CustomInput
           placeholder="Enter a destination or property"
@@ -36,7 +43,11 @@ const HotelsAndHomes = ({ setShowOverlay, privateStays = false }) => {
         />
       </div>
       <div className="hotelAndHomes-DateContainer">
-        <CustomDatePicker setShowOverLay={setShowOverlay} />
+        <CustomDatePicker
+          startDate={checkIn}
+          endDate={checkOut}
+          setShowOverLay={setShowOverlay}
+        />
 
         <div
           onClick={() => {
@@ -147,13 +158,24 @@ const HotelsAndHomes = ({ setShowOverlay, privateStays = false }) => {
       </div>
       <div className="heroSection-searchButton">
         <AppButton
+          onClick={() =>
+            navigate({
+              pathname: "/search",
+              search: createSearchParams({
+                destination: searchQuery,
+                checkIn: checkIn.toLocaleDateString(),
+                checkOut: checkOut.toLocaleDateString(),
+                passengers: adultCount + childCount,
+              }).toString(),
+            })
+          }
           solid={true}
           style={{
             width: "450px",
             padding: "20px",
             fontSize: "18px",
             textTransform: "uppercase",
-            fontWeight:"400"
+            fontWeight: "400",
           }}
         >
           Search

@@ -35,7 +35,7 @@ function App() {
         setUserData(data.data);
         setLoading(false);
       } else {
-        errorToast(data.msg);
+        // errorToast(data.msg);
         setLoading(false);
       }
     }
@@ -52,7 +52,7 @@ function App() {
           <ToastContainer />
           <div className="App">
             <AppRouter>
-              <Navbar />
+              {/* <Navbar /> */}
             </AppRouter>
           </div>
         </>
