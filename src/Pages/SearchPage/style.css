@@ -1,0 +1,16 @@
+.range-slider {
+  height: 4px !important;
+  background-color: #dddfe2 !important;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.range-slider__thumb {
+  height: 20px !important;
+  width: 20px !important;
+  /* background: transparent !important ; */
+  background: #fff !important; 
+  border: 1px solid #5392f9;
+}
+.range-slider__range {
+  background-color: #5392f9;
+}
