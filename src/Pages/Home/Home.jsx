@@ -6,10 +6,12 @@ import HeroSection from "../../Components/HeroSection/HeroSection";
 import NewUpdate from "../../Components/NewUpdate/NewUpdate";
 import Promotions from "../../Components/Promotions/Promotions";
 import Loader from "../../Components/Loader/Loader";
-import Footer1 from "../../Components/Footer1/Footer1";
 import Rentals from "../../Components/Rentals/Rentals";
 import FeaturedHomes from "../../Components/FeaturedHomes/FeaturedHomes";
 import RecommendedPlace from "../../Components/RecommendedPlace/RecommendedPlace";
+import Footer1 from "../../Components/Footer1/Footer1";
+import Footer2 from "../../Components/Footer2/Footer2";
+import Footer3 from "../../Components/Footer3/Footer3";
 
 //helpers
 import { reducerFunction } from "../../helpers/reducerFunction";
@@ -80,6 +82,8 @@ const Home = () => {
         )}
       </div>
       <Footer1 />
+      <Footer2 />
+      <Footer3 />
     </div>
   );
 };
