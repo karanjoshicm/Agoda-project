@@ -1,0 +1,40 @@
+.footer1Wrapper {
+  background-color: rgb(233, 235, 238);
+  color: rgb(42, 42, 46);
+
+  .footer1 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footerColoumn {
+    .footerColoumnTitle {
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .footerColoumnLinks {
+      li {
+        list-style: none;
+        line-height: 20px;
+        font-weight: 400;
+        margin: 0px;
+        a {
+          color: rgb(42, 42, 46);
+          font-size: 14px;
+
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  max-width: 1132px;
+  width: 100%;
+  padding: 48px 16px;
+  margin: auto;
+}
