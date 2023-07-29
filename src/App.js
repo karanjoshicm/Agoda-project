@@ -48,7 +48,13 @@ function App() {
   return (
     <AuthContext.Provider value={{ isLoggedIn: isLoggedIn, setIsLoggedIn: setIsLoggedIn, userData: userData, setUserData: setUserData }}>
       {
-        loading ? <>loading....</> : <>
+        loading ? <> <ToastContainer />
+        <div className="App">
+          <AppRouter>
+            {/* <Navbar /> */}
+          </AppRouter>
+        </div></> :
+         <>
           <ToastContainer />
           <div className="App">
             <AppRouter>

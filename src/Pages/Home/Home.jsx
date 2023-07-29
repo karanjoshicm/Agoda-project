@@ -66,18 +66,18 @@ const Home = () => {
       <NewUpdate />
       <HeroSection />
       <div className="homeWrapper">
-        {state?.loading ? (
+        {/* {state?.loading ? (
           <div className="loader-center">
             <Loader />
           </div>
         ) : (
           <>
-            {homePageData && (
+            {homePageData && ( */}
               <>
-                <Promotions promotionData={homePageData?.promotions?.images} />
+                <Promotions />
                 <Destinations
                   title="Top destinations in India"
-                  destinationData={homePageData?.topDestination}
+                  // destinationData={homePageData?.topDestination}
                 />
                 <Rentals rentalData={homePageData?.rentals} />
 
@@ -88,9 +88,9 @@ const Home = () => {
                   destinationData={homePageData?.Destination}
                 />
               </>
-            )}
-          </>
-        )}
+            {/* )} */}
+          {/* </> */}
+        {/* )} */}
       </div>
       <Footer1 />
       <Footer2 />
