@@ -35,7 +35,7 @@ function App() {
         setUserData(data.data);
         setLoading(false);
       } else {
-        errorToast(data.msg);
+        // errorToast(data.msg);
         setLoading(false);
       }
     }
@@ -48,11 +48,17 @@ function App() {
   return (
     <AuthContext.Provider value={{ isLoggedIn: isLoggedIn, setIsLoggedIn: setIsLoggedIn, userData: userData, setUserData: setUserData }}>
       {
-        loading ? <>loading....</> : <>
+        loading ? <> <ToastContainer />
+        <div className="App">
+          <AppRouter>
+            {/* <Navbar /> */}
+          </AppRouter>
+        </div></> :
+         <>
           <ToastContainer />
           <div className="App">
             <AppRouter>
-              <Navbar />
+              {/* <Navbar /> */}
             </AppRouter>
           </div>
         </>

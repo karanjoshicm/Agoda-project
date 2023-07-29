@@ -1,0 +1,251 @@
+.hotelCard {
+  margin-bottom: 15px;
+  border: 1px solid #dddfe2;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 12%);
+  transition: 0.3s all ease;
+  cursor: pointer;
+  //   min-height: 216px;
+  display: flex;
+  overflow: hidden;
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 30%);
+    background-color: rgb(235, 240, 252);
+  }
+  .hotelCardLeft {
+    box-sizing: border-box;
+    margin: 0px;
+    display: block;
+    flex-basis: 33.3333%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 33.3333%;
+    .hotelCard_ImageContainer {
+      .hotelCard_MainImage {
+        height: 182px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .hotelCard_MoreImages {
+        display: flex;
+        margin-top: -2px;
+        margin-bottom: -2px;
+        .hotelCard_smallImage {
+          flex: auto;
+          margin-right: 1px;
+          &:last-child {
+            margin-right: 0;
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+            max-height: 40px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  .hotelCardMid {
+    padding: 8px 0 8px 12px;
+    flex-basis: 41.6667%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 41.6667%;
+    margin: 0;
+    border-right: 1px solid #dddfe2;
+    .hotelCardMid_header {
+      margin-bottom: 4px;
+      .hotelName {
+        font-weight: 500;
+        color: rgb(36, 38, 44);
+        fill: rgb(36, 38, 44);
+        display: inline;
+        font-size: 20px;
+        line-height: 25px;
+      }
+      .hotelProperties {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 4px;
+        .hotelProperties_value {
+          font-size: 10px;
+          font-weight: 400;
+          color: rgb(36, 38, 44);
+          fill: rgb(36, 38, 44);
+          &.isLink {
+            font-weight: 400;
+            color: rgb(49, 112, 231);
+            fill: rgb(49, 112, 231);
+            font-size: 12px;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .hotelAmeneties {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+      .hotelAmeneties_value {
+        border-width: 1px;
+        border-color: rgb(193, 203, 224);
+        border-radius: 2px;
+        color: inherit;
+        fill: inherit;
+        border-style: solid;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-start;
+        height: 22px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        padding: 4px 8px;
+        span {
+          font-weight: 400;
+          color: rgb(36, 38, 44);
+          fill: rgb(36, 38, 44);
+          text-align: center;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 1;
+
+          font-size: 12px;
+        }
+      }
+    }
+    .hotelFeatures {
+      margin-top: 4px;
+      li {
+        list-style: none;
+        font-weight: 400;
+        color: rgb(36, 38, 44);
+        fill: rgb(36, 38, 44);
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        line-height: calc(14.98px);
+        font-size: 12px;
+        margin-top: calc(-0.98px);
+        margin-bottom: calc(-0.98px);
+        margin: 4px 0;
+      }
+    }
+    .hotelHighlights {
+      margin-top: 15px;
+      display: flex;
+      gap: 20px;
+      padding: 8px 16px 0 0;
+      border-top-width: 1px;
+      border-top-style: solid;
+      border-top-color: #d7d7db;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 500;
+        color: rgb(42, 42, 46);
+      }
+      .highLight_list {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+
+  .hotelCardRight {
+    box-sizing: border-box;
+    margin: 0px;
+    display: block;
+    flex-basis: 25%;
+    flex-grow: 0;
+    max-width: 25%;
+    text-align: right;
+    .hotelCardRight_data {
+      padding: 8px;
+      height: 100%;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      align-items: flex-end;
+      display: flex;
+      position: relative;
+      .hotelCardRight_header {
+        display: flex;
+        gap: 10px;
+        .hotelCardRight_header_text {
+          h4 {
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 500;
+            color: rgb(42, 42, 46);
+            line-height: normal;
+          }
+          p {
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            color: rgb(112, 112, 112);
+          }
+        }
+        .hotelCardRight_header_rating {
+          background-color: #5392f9;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          span {
+            padding: 5px 6px;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 400;
+            color: white;
+          }
+        }
+      }
+      .hotelCard_price {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        .hotel_originalPrice {
+          display: inline;
+          position: relative;
+          font-size: 18px;
+          font-weight: 700;
+          color: rgb(115, 115, 115);
+          &::before {
+            content: "";
+            background-color: #e12d2d;
+            right: 0;
+            top: 50%;
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            transform: rotate(165deg);
+          }
+        }
+        .subjectCashback {
+          margin-top: 4px;
+          font-size: 10px;
+          line-height: 14px;
+          font-weight: 400;
+          color: rgb(42, 42, 46);
+        }
+        .hotel_discountedPrice {
+          margin-top: 4px;
+          font-size: 22px;
+          font-weight: 700;
+          color: #000;
+        }
+      }
+    }
+  }
+}

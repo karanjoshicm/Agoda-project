@@ -8,8 +8,10 @@ import "./Promotions.scss";
 
 //import for slider
 import { sliderProperties } from "../../helpers/sliderProperties";
+import { promotionData } from "./promotionData";
 
-const Promotions = ({promotionData=[]}) => {
+const Promotions = ({}) => {
+  console.log("promotion data ",promotionData)
   return (
     <div className="promotions">
       <h3 className="promotions-title">Accommodation Promotions</h3>
@@ -18,7 +20,7 @@ const Promotions = ({promotionData=[]}) => {
       <Slide transitionDuration={1000} {...sliderProperties}>
         {promotionData.map((slideImage, index) => (
           <div key={index} className="promotionContainer">
-            <img src={slideImage} alt="" />
+            <img src={slideImage.url} alt="" />
           </div>
         ))}
       </Slide>

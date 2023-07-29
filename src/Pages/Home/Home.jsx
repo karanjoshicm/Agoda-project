@@ -12,7 +12,7 @@ import RecommendedPlace from "../../Components/RecommendedPlace/RecommendedPlace
 import Footer1 from "../../Components/Footer1/Footer1";
 import Footer2 from "../../Components/Footer2/Footer2";
 import Footer3 from "../../Components/Footer3/Footer3";
-
+import CustomHeader from "../../Components/CustomHeader/CustomHeader";
 //helpers
 import { reducerFunction } from "../../helpers/reducerFunction";
 import useToast from "../../helpers/useToast";
@@ -22,21 +22,28 @@ import { homeData } from "../../api/homePage/homeData";
 
 //styles
 import "./Home.scss";
+import useScrollPosition from "../../helpers/getScrollPosition";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const Home = () => {
+  // errorToast function from custom hook useToast
   const { errorToast } = useToast();
+
+  //handlling the home data api response using these states
   const INITIAL_STATE = {
     loading: false,
     data: {},
     error: false,
   };
   const [state, dispatch] = useReducer(reducerFunction, INITIAL_STATE);
+
   const [homePageData, setHomePageData] = useState({});
 
+  //function to fetch the homedata
   const getHomeData = async () => {
     dispatch({ type: "FETCH_START" });
     const data = await homeData();
-    console.log("data us ", data);
+    // console.log("data us ", data);
     if (data.status) {
       setHomePageData(data.data[0]);
       dispatch({ type: "FETCH_SUCCESS", payload: data });
@@ -50,23 +57,27 @@ const Home = () => {
     getHomeData();
   }, []);
 
+  // let scrollPostion = useScrollPosition();
+
   return (
     <div>
+      {/* {scrollPostion < 200 ? <Navbar /> : <CustomHeader />} */}
+      <Navbar />
       <NewUpdate />
       <HeroSection />
       <div className="homeWrapper">
-        {state?.loading ? (
+        {/* {state?.loading ? (
           <div className="loader-center">
             <Loader />
           </div>
         ) : (
           <>
-            {homePageData && (
+            {homePageData && ( */}
               <>
-                <Promotions promotionData={homePageData?.promotions?.images} />
+                <Promotions />
                 <Destinations
                   title="Top destinations in India"
-                  destinationData={homePageData?.topDestination}
+                  // destinationData={homePageData?.topDestination}
                 />
                 <Rentals rentalData={homePageData?.rentals} />
 
@@ -77,9 +88,9 @@ const Home = () => {
                   destinationData={homePageData?.Destination}
                 />
               </>
-            )}
-          </>
-        )}
+            {/* )} */}
+          {/* </> */}
+        {/* )} */}
       </div>
       <Footer1 />
       <Footer2 />

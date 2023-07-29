@@ -8,8 +8,14 @@
   min-height: 60px;
   -webkit-box-align: center;
   align-items: center;
-  // justify-content: space-between;
   gap: 130px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  max-width: 100%;
+  overflow: hidden;
   .navbar-left {
     padding: 0px 16px;
     flex: 0 0 auto;
