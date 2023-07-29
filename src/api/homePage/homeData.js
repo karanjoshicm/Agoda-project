@@ -18,7 +18,7 @@ export const homeData = async () => {
             return error?.response?.data
         }
         else {
-            return { status: false, msg: "Something went wrong !! Its not you its us.... we'll fix it soon!!" }
+            return { status: true, msg: "Something went wrong !! Its not you its us.... we'll fix it soon!!" }
         }
     }
 };
